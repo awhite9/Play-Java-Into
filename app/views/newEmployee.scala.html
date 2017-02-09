@@ -1,0 +1,53 @@
+@()
+
+<!DOCTYPE html>
+<html lang=""en">
+<head>
+    <style>
+        div{
+        margin: 10px;
+        padding-bottom: 10px;
+        width: 260px;}
+        .title{
+        float: left;
+        width: 100px;
+        text-align: right;
+        padding-right: 10px;}
+
+        fieldset {
+        width: 350px;
+        border: 1px solid Black;
+        border-radius: 10px;
+        padding: 20px
+        text-align: right;}
+
+        legend{
+        background-color: #efefef;
+        border: 1px solid #dcdcdc;
+        border-radius: 10px;
+        padding: 10px 20px;
+        text-align left;}
+    </style>
+
+    <meta charset=""UTF-8>
+    <title>Add New Employee</title>
+</head>
+<body>
+<form method="POST" action="@routes.EmployeesController.addEmployee()" id="newEmployee">
+    <fieldset>
+        <legend>Add New Employee Details</legend>
+        <div>
+            <lable for="lastName" class="title">Last Name:</lable>
+            <input type="text" name="lastName"/><br>
+        </div>
+        <div>
+            <lable for="firstName" class="title">First Name:</lable>
+            <input type="text" name="firstName"/><br>
+        </div>
+        <button>Add Employee</button>
+    </fieldset>
+
+
+</form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+@()
+
+<!DOCTYPE html>
+<html lang=""en">
+<head>
+    <style>
+        div{
+        margin: 10px;
+        padding-bottom: 10px;
+        width: 260px;}
+        .title{
+        float: left;
+        width: 100px;
+        text-align: right;
+        padding-right: 10px;}
+
+        fieldset {
+        width: 350px;
+        border: 1px solid Black;
+        border-radius: 10px;
+        padding: 20px
+        text-align: right;}
+
+        legend{
+        background-color: #efefef;
+        border: 1px solid #dcdcdc;
+        border-radius: 10px;
+        padding: 10px 20px;
+        text-align left;}
+    </style>
+
+    <meta charset=""UTF-8>
+    <title>Add New Category</title>
+</head>
+<body>
+<form method="POST" action="@routes.CategoriesController.addCategory()" id="newCategory">
+    <fieldset>
+    <legend>Add New Category Details</legend>
+    <div>
+        <lable for="name" class="title">Name:</lable>
+        <input type="text" name="categoryName"/><br>
+    </div>
+    <div>
+        <lable for="description" class="title">Description:</lable>
+        <input type="text" name="description"/><br>
+    </div>
+    <button>Add Category</button>
+    </fieldset>
+
+
+</form>
+</body>
+</html>
