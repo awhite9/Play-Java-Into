@@ -3,7 +3,7 @@ body{
     color: #111111;}
 
 table {
-    width: 800px;}
+    width: 950px;}
 
 th, td {
     padding: 7px 10px 10px 10px;}
@@ -21,4 +21,3 @@ tr:nth-child(odd) {
 
 tr:hover{
     background-color: #c3e6e5;}
-

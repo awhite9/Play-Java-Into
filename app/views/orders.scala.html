@@ -12,14 +12,22 @@
 <table>
     <tr>
         <th>Order ID</th>
-        <th></th>
-        <th>Quantity</th>
+        <th>Customer ID</th>
+        <th>Order Date</th>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Employee Photo</th>
+
     </tr>
-    @for(orderdetail <- orderdetails){
+    @for(order <- orders){
     <tr>
-        <td>@orderdetail.productID</td>
-        <td>@orderdetail.unitPrice</td>
-        <td>@orderdetail.quantity</td>
+        <td>@order.orderID</td>
+        <td>@order.customerID</td>
+        <td>@order.orderDate</td>
+        <td>@order.employeeID</td>
+        <td>@order.employee.firstName @order.employee.lastName</td>
+        <td><img src=@{routes.EmployeesController.getPicture(order.employee.employeeID)}></td>
+
     </tr>
     }
 </table>

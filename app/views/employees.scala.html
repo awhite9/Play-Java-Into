@@ -11,17 +11,21 @@
 
 <table>
     <tr>
-        <th>Employee ID</th>
-        <th>Last Name</th>
+        <th>Employee ID<br>(click to edit)</th>
         <th>First Name</th>
+        <th>Last Name</th>
         <th>Picture</th>
+        <th>Manager</th>
+        <th>Manager Picture</th>
     </tr>
     @for(employee <- employees){
     <tr>
-        <td>@employee.employeeID</td>
-        <td>@employee.lastName</td>
+        <td><a href="@routes.EmployeesController.editEmployee(employee.employeeID)">@employee.employeeID</a> </td>
         <td>@employee.firstName</td>
+        <td>@employee.lastName</td>
         <td><img src=@{routes.EmployeesController.getPicture(employee.employeeID)}></td>
+        <td>@if(employee.manager !=null){@employee.manager.firstName @employee.manager.lastName}</td>
+        <td>@if(employee.manager !=null){<img src=@{routes.EmployeesController.getPicture(employee.manager.employeeID)}>}</td>
     </tr>
     }
 </table>

@@ -41,4 +41,11 @@ public class OrderdetailsController extends Controller
         return ok(views.html.orderdetails.render(orderdetails));
 
     }
+    @Transactional(readOnly = true)
+    public Result googleCharts()
+    {
+        List<Orderdetails> orderdetails = (List<Orderdetails>) jpaApi.em().createQuery("Select od from Orderdetails od").getResultList();
+
+        return ok(views.html.googlecharts.render(orderdetails));
+    }
 }

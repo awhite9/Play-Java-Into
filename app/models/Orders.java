@@ -19,4 +19,11 @@ public class Orders
 
     @Column(name = "orderDate")
     public Date orderDate;
+
+    @ManyToOne(optional=false)
+    @JoinColumn(name = "employeeId")
+    public Employees employee;
+
+
+
 }

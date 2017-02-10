@@ -19,4 +19,5 @@ public class Customers
     @Column(name ="contactTitle")
     public String contactTitle;
 
+
 }

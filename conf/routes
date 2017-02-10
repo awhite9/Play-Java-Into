@@ -37,3 +37,15 @@ POST    /addEmployee                controllers.EmployeesController.addEmployee
 GET     /customers                  controllers.CustomersController.getCustomers
 GET     /customersList              controllers.CustomersController.index
 
+# Orders page
+GET     /orders                     controllers.OrdersController.getOrders
+GET     /ordersList                 controllers.OrdersController.index
+GET     /ordersO                    controllers.OrdersController.getOrderOrderdetailJoin
+GET     /ordersOfStuff              controllers.OrdersController.indexOfStuff
+GET     /totalSale                  controllers.OrdersController.getTotalSalesCustomer
+
+
+# Google Charts Page
+GET     /googlecharts               controllers.OrderdetailsController.googleCharts
+
+
