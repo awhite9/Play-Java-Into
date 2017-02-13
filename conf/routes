@@ -48,4 +48,11 @@ GET     /totalSale                  controllers.OrdersController.getTotalSalesCu
 # Google Charts Page
 GET     /googlecharts               controllers.OrderdetailsController.googleCharts
 
+# APIDemo
+GET     /rawJson                    controllers.APIDemo.getDemo
+GET     /pojo                       controllers.APIDemo.getDemoPojo
+GET     /pojoTree                   controllers.APIDemo.getDemoPojoTree
+GET     /latinStuff                 controllers.APIDemo.getLatinStuff
+
+
 
