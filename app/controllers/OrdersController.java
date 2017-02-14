@@ -65,7 +65,7 @@ public class OrdersController extends Controller
     @Transactional(readOnly = true)
     public Result getTotalSalesCustomer()
     {
-        List<TotalSalesCustomer> totalSalesCustomer = (List<TotalSalesCustomer>) jpaApi.em().createNativeQuery("select od.orderId, od.productid, c.companyName, (od.unitPrice * od.quantity) as totalPrice from orderdetails od join orders o on o.orderid = od.orderid join customers c on o.customerID = c.customerID group by c.companyName", TotalSalesCustomer.class).getResultList();
+        List<TotalSalesCustomer> totalSalesCustomer = (List<TotalSalesCustomer>) jpaApi.em().createNativeQuery("select od.orderId, od.productid, c.companyName, (od.unitPrice * od.quantity) as totalPrice from orderdetails od join orders o on o.orderid = od.orderid join customers c on o.customerID = c.customerID group by c.companyName limit 15", TotalSalesCustomer.class).getResultList();
 
         return ok(views.html.totalSalesCustomer.render(totalSalesCustomer));
 

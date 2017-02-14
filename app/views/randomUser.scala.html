@@ -1,0 +1,16 @@
+@(randomUser: RandomUser)
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h1>Random User Generator</h1>
+@for(results <- randomUser.getResults){
+
+@results.getName.getTitle. @results.getName.getFirst @results.getName.getLast}
+
+
+
+</body>
+</html>

@@ -9,6 +9,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 
 import javax.inject.Inject;
+import java.io.IOException;
 import java.util.List;
 
 import static play.libs.Json.toJson;
@@ -87,5 +88,19 @@ public class CategoriesController extends Controller
         return redirect(routes.CategoriesController.index());
     }
 
+    //@BodyParser.Of(MyMultipartFormDataBodyParser.class)
+    public Result upload() throws IOException
+    {
+        //final Http.MultipartFormData<File> formData = request().body().asMultipartFormData();
+        //final Http.MultipartFormData.FilePart<File> filePart = formData.getFile("name");
+        //final File file = filePart.getFile();
+        //final long data = operateOnTempFile(file);
+        //return ok("file size = " + data + "");
+        return null;
+    }
 
 }
+
+
+
+

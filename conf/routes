@@ -53,6 +53,7 @@ GET     /rawJson                    controllers.APIDemo.getDemo
 GET     /pojo                       controllers.APIDemo.getDemoPojo
 GET     /pojoTree                   controllers.APIDemo.getDemoPojoTree
 GET     /latinStuff                 controllers.APIDemo.getLatinStuff
+GET     /randomUser                 controllers.APIDemo.getRandomUser
 
 
 
