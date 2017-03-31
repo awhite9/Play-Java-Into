@@ -88,16 +88,6 @@ public class CategoriesController extends Controller
         return redirect(routes.CategoriesController.index());
     }
 
-    //@BodyParser.Of(MyMultipartFormDataBodyParser.class)
-    public Result upload() throws IOException
-    {
-        //final Http.MultipartFormData<File> formData = request().body().asMultipartFormData();
-        //final Http.MultipartFormData.FilePart<File> filePart = formData.getFile("name");
-        //final File file = filePart.getFile();
-        //final long data = operateOnTempFile(file);
-        //return ok("file size = " + data + "");
-        return null;
-    }
 
 }
 
